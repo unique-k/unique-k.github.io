@@ -2,23 +2,50 @@
 <html>
 <head>
 <!-- adding dependencies for JQuery-->
-<script src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://kit.fontawesome.com/318f0f2792.js"crossorigin="anonymous"></script> <!-- Linking for icons -->
 <link rel="stylesheet" type="text/css" href="first_css.css"> <!-- Linking CSS -->
-<script type="text/javascript" src="bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+    $(function(){
+    
+        $(".dashes").on("click",function(){
+            
+            if($(".menu_opt").hasClass("actv")){
+                $(".menu_opt").removeClass("actv");
+            }
+            else{
+                $(".menu_opt").addClass("actv");
+            }
+        })
+        
+    });
+</script>
+
+
 <title>Unique's Info</title>
 <meta charset = "UTF-8">
-
-
-
-
 
 </head>
 
 <body>
-
-
+<!-- Code for Responsive Navbar-->
+<nav>
+    
+    <!-- Create a unordered list -->
+    <ul class = "change_styles">
+        
+        <li class = "menu_opt"><a href = "#">Home</a></li>
+        <li class = "menu_opt"><a href = "#">About</a></li>
+        <li class = "menu_opt"><a href = "#">Work</a></li>
+        <li class = "menu_opt"><a href = "#">Projects</a></li>
+        <li class = "dashes"><span class = "menu_bar"></span></li>
+    </ul>
+</nav>
+<!--other things-->
 <img src="unique.jpg" alt="Profile Picture"width="400" height="400" />
 <p>Hello, I am <em>Unique Karanjit</em> and I am senior at UTA majoring in Computer Science. </p>
 

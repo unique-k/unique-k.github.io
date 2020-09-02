@@ -1,6 +1,14 @@
+*
+{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body
 {	
-background-color: black;	
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: black;	
 }
 h1 
 {
@@ -13,6 +21,122 @@ h1,p,h2
 }
 a
 {
-	color:red;
+  color:white;
+  text-decoration:none;
 }
+
+/*code for navbar*/
+nav
+{
+  background:black;
+  padding: 5px 5px;
+}
+ul
+{
+  list-style-type: none;
+}
+a:hover /* functionality when we put cursor above the options*/
+{
+  color:rgb(230, 218, 218);
+  text-decoration: underline;
+}
+.change_styles li /*everything in list including the menu sign*/
+{
+  font-size:16px;
+  padding: 10px 10px;
+}
+/*
+.change_styles li a
+{
+  
+}*/
+
+/* for small screen like mobile phones*/
+.change_styles /*everything on navbar*/
+{
+  display: flex; /*this will have menu options next to each other.*/
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_bar /*the three dashed menu sign, this function will do one bar*/
+{
+  display: inline-block;
+  height: 1px;
+  background: white;
+  position: relative;
+  width:15px;
+  
+}
+.menu_bar::after, .menu_bar::before /*to create two more bars*/
+{
+    display: inline-block;
+    height: 1px;
+    background: white;
+    position: absolute;
+    width:15px;
+    content:""; /*same property as menu_bar but need contents. */
+}
+.menu_bar::after
+{
+  bottom:5px;
+}
+.menu_bar::before
+{
+  top:5px;
+}
+
+.dashes:hover /*when the mouse is near hover, it will have pointer*/
+{
+  cursor: pointer;
+  order:1;
+  
+}
+.menu_opt
+{
+  
+  
+  order:2;
+  
+  
+  display:none;
+  
+}
+.menu_opt.actv
+{
+  width:auto;
+  
+  display:block;
+}
+
+/*adding media query*/
+@media all and (min-width:500px)
+{
+  
+  .menu_opt
+  {
+    
+    width:auto;
+    
+    display: block;
+    
+    
+  
+   
+  }
+  .dashes
+  {
+    
+    display:none;
+  }
+  .change_styles li
+  {
+    padding: 10px 10px;
+
+  }
+  
+}
+
+
+
 
