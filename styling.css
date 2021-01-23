@@ -1,0 +1,19 @@
+body{
+    overflow-x:hidden;
+    font-family: 'Montserrat',sans-serif;
+    color: #616971;
+}
+
+img{
+    border-radius:50%;
+}
+.center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*for bottom portion*/
+#bottom{
+    position:relative;
+    bottom:0;
+}
